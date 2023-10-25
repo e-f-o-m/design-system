@@ -1,0 +1,345 @@
+@import '../abstracts/colors-dark';
+
+input {
+    border-radius: 9px;
+    background: $input-bg;
+    border: none;
+    padding: 0.3rem 0.7rem;
+    color: $text;
+}
+
+
+.input,
+.input-bg {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.5rem;
+    max-width: 500px;
+    position: relative;
+
+    input {
+        border: solid 1px $gray200;
+        padding: 0.58rem 0.7rem;
+        font-size: 1rem;
+        outline: none;
+        transition: all 0.1s linear;
+        background: transparent;
+
+        &:focus {
+            outline: solid 1px $blue500;
+        }
+
+        &::placeholder {
+            color: transparent;
+        }
+
+        //Enfocado, con contenido, (escribiendo)
+        &:focus~.placeholder,
+        &:not(:placeholder-shown)~.placeholder {
+            color: $blue500;
+            left: 1px;
+            transform: translateY(-200%);
+        }
+
+        //No Enfocado (ahora placeholder)
+        &:not(:focus)~.placeholder {
+            color: $dark600;
+        }
+
+        //No Enfocado y con contenido, (ahora label)
+        &:not(:focus):not(:placeholder-shown)~.placeholder {
+            color: $dark600;
+        }
+
+        &[error]~.placeholder,
+        &[error]~.helper {
+            color: $red100 !important;
+            font-weight: 400;
+        }
+
+        &[error] {
+            border: solid 1px $red200;
+            outline: none !important;
+        }
+    }
+
+    .placeholder {
+        font-size: 0.85rem;
+        color: $dark500;
+        position: absolute;
+        left: 1rem;
+        //top: calc((100% + 1.5rem)/2 - 0.58rem); 
+        top: 2.2rem;
+        transition: all 0.1s linear;
+        pointer-events: none;
+    }
+
+    .helper {
+        font-size: 0.9rem;
+        padding: 0px 4px;
+        color: $dark600;
+        margin-bottom: 0.5rem;
+        display: none;
+    }
+}
+
+.input-bg {
+    input {
+        background: $lightInput;
+    }
+}
+
+.search-ico {
+    z-index: 1;
+    position: relative;
+    display: block;
+
+    .ico {
+        position: absolute;
+        top: 0.7rem;
+        left: 0.6rem;
+        color: #aaa;
+    }
+
+    .form-control {
+        padding-left: 2.2rem;
+    }
+}
+
+.checkbox {
+    position: relative;
+
+    label {
+        margin-left: 0.25rem;
+    }
+
+    &:hover {
+        &::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -8px;
+            background: #64829b3f;
+            pointer-events: none;
+            height: 2rem;
+            width: 2rem;
+            border-radius: 100%;
+        }
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    //cuadro
+    input[type="checkbox"]+label:before {
+        content: "";
+        height: 0.9rem;
+        width:  0.9rem;
+        float:  left;
+        margin: 3px 5px 0 0;
+        border: 2px solid #a3adaf;
+        border-radius: 2px;
+        background: #ffffff10;
+        box-shadow: 0px 0px 2px #0000003d;
+    }
+
+    //cuadro chekeado
+    input[type="checkbox"]:checked+label:before {
+        border: 2px solid $blue500;
+    }
+
+    //Visto
+    input[type="checkbox"]:checked+label {
+        &:after {
+            content: "";
+            width: 9px;
+            height: 3px;
+            border: 3px solid $blue500;
+            float: left;
+            margin-left: -19px;
+            margin-top: 9px;
+            border-right: 0;
+            border-top: 0;
+            transform: rotate(-55deg);
+        }
+    }
+}
+
+.radio {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+
+    input[type="radio"] {
+        display: inline;
+        width: 1.22rem;
+        height: 1.22rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    label {
+        display: block;
+        width: 95%;
+
+    }
+}
+
+
+.switch-on-off {
+    position: relative;
+
+    .info {
+        pointer-events: none;
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        font-size: 0.5rem;
+        color: #fff;
+
+        &::after {
+            content: "ON";
+            position: absolute;
+            top: 0;
+            right: 0px;
+            width: 2.2rem;
+            height: 1.6rem;
+        }
+    }
+}
+
+.switch,
+.switch-duo,
+.switch-theme {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    justify-content: space-between;
+
+    input[type=checkbox] {
+        height: 0;
+        width: 0;
+        visibility: hidden;
+
+        &:checked+label {
+            background: $blue500
+        }
+
+        &:checked+label {
+            &:after {
+                left: calc(100% - 1px);
+                transform: translateX(-100%);
+            }
+        }
+    }
+
+    .ball,
+    .switch-ico .ball {
+        cursor: pointer;
+        text-indent: -9999px;
+        width: 3.1rem;
+        height: 1.6rem;
+        background: grey;
+        display: block;
+        border-radius: 12px;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            width: calc(1.5rem - 1px);
+            height: calc(1.5rem - 1px);
+            background: #fff;
+            border-radius: 50%;
+            transition: 0.2s;
+        }
+
+        &:active {
+            &:after {
+                width: 2rem;
+            }
+        }
+    }
+
+    .switch-ico {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        .inner-icos {
+            width: 100%;
+            position: absolute;
+            top: 0.2rem;
+            left: 0;
+            text-wrap: nowrap;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 0.2rem;
+            pointer-events: none;
+
+            .fas {
+                color: $text-white;
+            }
+        }
+
+    }
+
+}
+
+.switch-duo {
+    display: flex;
+    justify-content: left;
+    gap: 1rem;
+
+    .switch-ico {
+        .inner-icos {
+            top: 0.4rem;
+            padding: 0 0.3rem;
+
+            .fas {
+                font-size: 0.6rem;
+            }
+        }
+    }
+}
+
+.switch-theme {
+    display: flex;
+    justify-content: left;
+    gap: 1rem;
+    .switch-ico {
+        input[type=checkbox] {
+            &:checked+.ball {
+                background: linear-gradient(-90deg, #456574c7, #265c74b7);
+                &+.inner-icos .fas {
+                    &:nth-child(1) {
+                        opacity: 0;
+                    }
+                    &:nth-child(2) {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .ball {
+            background: linear-gradient(-90deg, #ffd11b, #ffd119, #ffd736, #e4bc1f);
+        }
+
+        .inner-icos {
+            .fas {
+                font-size: 0.8rem;
+                color: #f1c40f;
+                transition: all 100ms ease-out;
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}

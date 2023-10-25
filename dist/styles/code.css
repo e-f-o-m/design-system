@@ -1,0 +1,94 @@
+.code > :nth-child(1) {
+  margin-bottom: 1px; }
+
+pre.prettyprint {
+  border: solid 2px #0a0a0a11;
+  border-radius: 0.5rem;
+  box-shadow: -1px 3px 6px #00000018;
+  display: none; }
+
+pre.prettyprint:first-of-type {
+  display: block; }
+
+.dark {
+  /* desert scheme ported from vim to google prettify */
+  /* string  - pink */
+  /* comment - skyblue */
+  /* type    - lightgreen */
+  /* literal - darkred */
+  /* punctuation */
+  /* plaintext */
+  /* html/xml tag    - lightyellow */
+  /* attribute name  - khaki */
+  /* attribute value - pink */
+  /* decimal         - lightgreen */
+  /* Specify class=linenums on a pre to get line numbering */
+  /* IE indents via margin-left */
+  /* Alternate shading for lines */ }
+  .dark pre.prettyprint {
+    display: block;
+    background-color: #192035;
+    border: solid 2px #0a0a0a25;
+    border-radius: 0.5rem;
+    box-shadow: -2px 3px 7px #00000049; }
+  .dark pre .nocode {
+    background-color: none;
+    color: #111a3569; }
+  .dark pre .str {
+    color: #ffa0a0; }
+  .dark pre .kwd {
+    color: #f0e68c;
+    font-weight: bold; }
+  .dark pre .com {
+    color: #87ceeb; }
+  .dark pre .typ {
+    color: #98fb98; }
+  .dark pre .lit {
+    color: #cd5c5c; }
+  .dark pre .pun {
+    color: #fff; }
+  .dark pre .pln {
+    color: #fff; }
+  .dark pre .tag {
+    color: #f0e68c;
+    font-weight: bold; }
+  .dark pre .atn {
+    color: #bdb76b;
+    font-weight: bold; }
+  .dark pre .atv {
+    color: #ffa0a0; }
+  .dark pre .dec {
+    color: #98fb98; }
+  .dark ol.linenums {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #AEAEAE; }
+  .dark li.L0, .dark li.L1, .dark li.L2, .dark li.L3, .dark li.L5, .dark li.L6, .dark li.L7, .dark li.L8 {
+    list-style-type: none; }
+  @media print {
+    .dark pre.prettyprint {
+      background-color: none; }
+    .dark pre .str, .dark code .str {
+      color: #060; }
+    .dark pre .kwd, .dark code .kwd {
+      color: #006;
+      font-weight: bold; }
+    .dark pre .com, .dark code .com {
+      color: #600;
+      font-style: italic; }
+    .dark pre .typ, .dark code .typ {
+      color: #404;
+      font-weight: bold; }
+    .dark pre .lit, .dark code .lit {
+      color: #044; }
+    .dark pre .pun, .dark code .pun {
+      color: #440; }
+    .dark pre .pln, .dark code .pln {
+      color: #000; }
+    .dark pre .tag, .dark code .tag {
+      color: #006;
+      font-weight: bold; }
+    .dark pre .atn, .dark code .atn {
+      color: #404; }
+    .dark pre .atv, .dark code .atv {
+      color: #060; } }

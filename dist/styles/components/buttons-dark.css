@@ -1,0 +1,91 @@
+button {
+  text-transform: uppercase; }
+
+.btn,
+.btn-s,
+.btn-e,
+.btn-w {
+  border-radius: 0.77rem;
+  border: none;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  color: antiquewhite;
+  box-shadow: -0px 1px 3px #00000063;
+  text-shadow: -1px 1px 1px #00000021;
+  background: #9DFFEE;
+  background: linear-gradient(-12deg, #3E7BFA, #3268D5);
+  position: relative; }
+  .btn:hover,
+  .btn-s:hover,
+  .btn-e:hover,
+  .btn-w:hover {
+    filter: contrast(140%) hue-rotate(-20deg) drop-shadow(1px 1px 5px #ffffff1c); }
+
+.btn-s {
+  background: #01C371; }
+
+.btn-e {
+  background: #ff5c5c; }
+
+.btn-w {
+  background: #ee9938; }
+
+.chip {
+  border: solid 1px #0e0e0e7e;
+  border-radius: 1.2rem;
+  padding: 0.3rem 0.7rem;
+  width: min-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  font-weight: 600;
+  color: #000000a1;
+  text-transform: capitalize; }
+  .chip:hover {
+    filter: contrast(140%) hue-rotate(-20deg) drop-shadow(1px 1px 5px #ffffff1c); }
+  .chip .chip__x {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.4rem;
+    margin-right: -5px;
+    white-space: nowrap;
+    background: #808080e5;
+    color: white;
+    border-radius: 50%;
+    height: 1.12rem;
+    width: 1.12rem;
+    aspect-ratio: 1 / 1;
+    font-weight: 400;
+    font-size: 11px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; }
+  .chip .chip_ico {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 1.12rem;
+    width: 1.12rem;
+    margin-left: -2px;
+    margin-right: 1px; }
+
+.segmented-buttons {
+  display: flex;
+  overflow: hidden;
+  border: 1px solid #151523;
+  border-radius: 4px;
+  box-shadow: -2px 3px 7px #0000001a; }
+  .segmented-buttons button {
+    flex: 1;
+    padding: 12px 16px;
+    background: #131a2e;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: #F6F7FB; }
+    .segmented-buttons button:first-child {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px; }
+    .segmented-buttons button:last-child {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px; }
+    .segmented-buttons button:hover {
+      filter: contrast(140%) hue-rotate(-20deg) drop-shadow(1px 1px 5px #ffffff1c); }

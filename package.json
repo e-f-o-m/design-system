@@ -1,0 +1,15 @@
+{
+  "name": "elds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "node-sass --watch -o dist/styles src/styles/"
+  },
+  "author": "efom",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

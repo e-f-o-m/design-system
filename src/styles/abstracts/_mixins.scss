@@ -1,0 +1,26 @@
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// Definir el mixin para las media queries
+//Trabaja con el minimo
+@mixin mq($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media (min-width: map-get($breakpoints, $size)) {
+      @content;
+    }
+  } @else {
+    @error "El punto de ruptura '#{$size}' no está definido en los breakpoints";
+  }
+}
+
+/* USO ancho del elemento en pantallas pequeñas y mayores */
+/* @include mq(sm) {
+    width: 50%; 
+  } 
+*/

@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/components/buttons.css">
+    <link rel="stylesheet" href="styles/index.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" href="styles/code.css">
+    
+    <title>ELDS</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <aside>
+            <div class="actions">
+                <div class="theme">
+                    <div class="switch-theme">
+                        <div class="name">Light</div>
+                        <div class="switch-ico">
+                            <input type="checkbox" id="switch0" onclick="changeTheme(true)" />
+                            <label for="switch0" class="ball"></label>
+                            <label class="inner-icos">
+                                <span class="fas fa-sun">🌞</span>
+                                <span class="fas fa-moon">🌙</span>
+                            </label>
+                        </div>
+
+                        <div class="name">Dark</div>
+                    </div>
+
+                    <!-- <button onclick="changeTheme(true)">Light</button>
+                    <button onclick="changeTheme(false)">Dark</button> -->
+                    <script>
+                        function changeTheme(isLight) {
+                            let container = document.querySelector("body > .container");
+                            container.classList.toggle("dark")
+                        }
+                    </script>
+                </div>
+            </div>
+            <ul>
+                <li><a href="#badges">badges</a></li>
+                <li><a href="#bottom-app-bar">bottom-app-bar</a></li>
+                <li><a href="#bottom-sheets">bottom-sheets</a></li>
+                <li><a href="#all-buttons">all-buttons</a></li>
+                <li><a href="#buttons">buttons</a></li>
+                <li><a href="#floating-action-button">floating-action-button</a></li>
+                <li><a href="#extended-fab">extended-fab</a></li>
+                <li><a href="#icon-buttons">icon-buttons</a></li>
+                <li><a href="#segmented-buttons">segmented-buttons</a></li>
+                <li><a href="#cards">cards</a></li>
+                <li><a href="#carousel">carousel</a></li>
+                <li><a href="#checkbox">checkbox</a></li>
+                <li><a href="#chips">chips</a></li>
+                <li><a href="#date-pickers">date-pickers</a></li>
+                <li><a href="#dialogs">dialogs</a></li>
+                <li><a href="#divider">divider</a></li>
+                <li><a href="#lists">lists</a></li>
+                <li><a href="#menus">menus</a></li>
+                <li><a href="#navigation-bar">navigation-bar</a></li>
+                <li><a href="#navigation-drawer">navigation-drawer</a></li>
+                <li><a href="#navigation-rail">navigation-rail</a></li>
+                <li><a href="#progress-indicators">progress-indicators</a></li>
+                <li><a href="#radio-button">radio-button</a></li>
+                <li><a href="#search">search</a></li>
+                <li><a href="#side-sheets">side-sheets</a></li>
+                <li><a href="#sliders">sliders</a></li>
+                <li><a href="#snackbar">snackbar</a></li>
+                <li><a href="#switch">switch</a></li>
+                <li><a href="#tabs">tabs</a></li>
+                <li><a href="#text-fields">text-fields</a></li>
+                <li><a href="#time-pickers">time-pickers</a></li>
+                <li><a href="#tooltips">tooltips</a></li>
+                <li><a href="#top-app-bar">top-app-bar</a></li>
+            </ul>
+        </aside>
+
+
+        <section>
+            <header>
+                <h1>Elemental Desing System</h1>
+                <h3>Components</h3>
+            </header>
+
+            <article id="badges" class="hidden">
+                <div class="title-article">
+                    <h4>badges</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#badges')">&lt;/&gt;</div></div>
+                </div>
+                badges
+            </article>
+
+            <article id="bottom-app-bar" class="hidden">
+                <div class="title-article">
+                    <h4>bottom-app-bar</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#bottom-app-bar')">&lt;/&gt;</div></div>
+                </div>
+                bottom-app-bar
+            </article>
+
+            <article id="bottom-sheets" class="hidden">
+                <div class="title-article">
+                    <h4>bottom-sheets</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#bottom-sheets')">&lt;/&gt;</div></div>
+                </div>
+                bottom-sheets
+            </article>
+
+            <article id="all-buttons" class="hidden">
+                <div class="title-article">
+                    <h4>all-buttons</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#all-buttons')">&lt;/&gt;</div></div>
+                </div>
+                all-buttons
+            </article>
+
+            <article id="buttons">
+                <div class="title-article">
+                    <h4>BUTTONS</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#buttons')">&lt;/&gt;</div></div>
+                </div>
+                <button class="btn">Default</button>
+                <button class="btn-e">Error</button>
+                <button class="btn-w">Warning</button>
+                <button class="btn-s">Success</button>
+
+                <button class="chip">Success</button>
+                <button class="chip">chip <span class="chip__x">x</span> </button>
+                <button class="chip"><span class="chip_ico">✔</span>chip </button>
+                
+                <div class="code">
+                    <div class="segmented-buttons">
+                        <button onclick="selectTypeCode('html', '#buttons')">HTML</button>
+                        <button onclick="selectTypeCode('css', '#buttons')">SCSS</button>
+                        <button onclick="selectTypeCode('js',   '#buttons')">Javascript</button>
+                    </div>
+
+                    <pre class="prettyprint html"><code>
+    &lt;button class="btn">Default&lt;/button&gt;
+    &lt;button class="btn-e"&gt;Error&lt;/button&gt;
+    &lt;button class="btn-w"&gt;Warning&lt;/button&gt;
+    &lt;button class="btn-s"&gt;Success&lt;/button&gt;
+
+    &lt;button class="chip"&gt;Success&lt;/button&gt;
+    &lt;button class="chip"&gt;chip &lt;span class="chip__x"&gt;x&lt;/span&gt; &lt;/button&gt;
+    &lt;button class="chip"&gt;&lt;span class="chip_ico"&gt;✔&lt;/span&gt;chip &lt;/button&gt; 
+                    </code></pre>
+
+                    <pre class="prettyprint css"><code>
+    &lt;link rel="stylesheet" href="styles/components/buttons.css"&gt;
+                    </code></pre>
+
+                    <pre class="prettyprint js"><code>
+    Empty
+                    </code></pre>
+                </div>
+
+            </article>
+
+            <article id="floating-action-button" class="hidden">
+                <div class="title-article">
+                    <h4>floating-action-button</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#floating-action-button')">&lt;/&gt;</div></div>
+                </div>
+                floating-action-button
+            </article>
+
+            <article id="extended-fab" class="hidden">
+                <div class="title-article">
+                    <h4>extended-fab</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#extended-fab')">&lt;/&gt;</div></div>
+                </div>
+                extended-fab
+            </article>
+
+            <article id="icon-buttons" class="hidden">
+                <div class="title-article">
+                    <h4>icon-buttons</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#icon-buttons')">&lt;/&gt;</div></div>
+                </div>
+                icon-buttons
+            </article>
+
+            <article id="segmented-buttons" class="hidden">
+                <div class="title-article">
+                    <h4>segmented-buttons</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#segmented-buttons')">&lt;/&gt;</div></div>
+                </div>
+                segmented-buttons
+            </article>
+
+            <article id="cards" class="hidden">
+                <div class="title-article">
+                    <h4>cards</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#cards')">&lt;/&gt;</div></div>
+                </div>
+                cards
+            </article>
+
+            <article id="carousel">
+                <div class="title-article">
+                    <h4>carousel</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#carousel')">&lt;/&gt;</div></div>
+                </div>
+                <div class="carousel">
+                    <img src="img.jpg" alt="">
+                </div>
+            </article>
+
+            <article id="checkbox">
+                <div class="title-article">
+                    <h4>checkbox</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#checkbox')">&lt;/&gt;</div></div>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="checkbox1">
+                    <label for="checkbox1">Checkbox Off</label>
+                </div>
+            </article>
+
+            <article id="chips" class="hidden">
+                <div class="title-article">
+                    <h4>chips</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#chips')">&lt;/&gt;</div></div>
+                </div>
+                chips
+            </article>
+
+            <article id="date-pickers" class="hidden">
+                <div class="title-article">
+                    <h4>date-pickers</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#date-pickers')">&lt;/&gt;</div></div>
+                </div>
+                date-pickers
+            </article>
+
+            <article id="dialogs" class="hidden">
+                <div class="title-article">
+                    <h4>dialogs</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#dialogs')">&lt;/&gt;</div></div>
+                </div>
+                dialogs
+            </article>
+
+            <article id="divider" class="hidden">
+                <div class="title-article">
+                    <h4>divider</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#divider')">&lt;/&gt;</div></div>
+                </div>
+                divider
+            </article>
+
+            <article id="lists" class="hidden">
+                <div class="title-article">
+                    <h4>lists</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#lists')">&lt;/&gt;</div></div>
+                </div>
+                lists
+            </article>
+
+            <article id="menus" class="hidden">
+                <div class="title-article">
+                    <h4>menus</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#menus')">&lt;/&gt;</div></div>
+                </div>
+                menus
+            </article>
+
+            <article id="navigation-bar" class="hidden">
+                <div class="title-article">
+                    <h4>navigation-bar</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#navigation-bar')">&lt;/&gt;</div></div>
+                </div>
+                navigation-bar
+            </article>
+
+            <article id="navigation-drawer" class="hidden">
+                <div class="title-article">
+                    <h4>navigation-drawer</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#navigation-drawer')">&lt;/&gt;</div></div>
+                </div>
+                navigation-drawer
+            </article>
+
+            <article id="navigation-rail" class="hidden">
+                <div class="title-article">
+                    <h4>navigation-rail</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#navigation-rail')">&lt;/&gt;</div></div>
+                </div>
+                navigation-rail
+            </article>
+
+            <article id="progress-indicators" class="hidden">
+                <div class="title-article">
+                    <h4>progress-indicators</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#progress-indicators')">&lt;/&gt;</div></div>
+                </div>
+                progress-indicators
+            </article>
+
+            <article id="radio-button">
+                <div class="title-article">
+                    <h4>radio-button</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#radio-button')">&lt;/&gt;</div></div>
+                </div>
+                <div class="radio">
+                    <input type="radio" id="radio1" name="mradio">
+                    <label for="radio1">Radio 1</label>
+                    <input type="radio" id="radio2" name="mradio">
+                    <label for="radio2">Radio 2</label>
+                    <input type="radio" id="radio3" name="mradio">
+                    <label for="radio3">Radio 3</label>
+                </div>
+            </article>
+
+            <article id="search">
+                <div class="title-article">
+                    <h4>search</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#search')">&lt;/&gt;</div></div>
+                </div>
+                <div class="search">
+                    <div class="input-search-content">
+                        <div class="input-bg">
+                            <input type="text" placeholder=".">
+                            <label class="placeholder">Search</label>
+                        </div>
+                        <div class="drop" onclick="showListSearch()">▼</div>
+                    </div>
+                    <div class="items" style="display: none;">
+                        <div class="item">Content item one</div>
+                        <div class="item">Content item two</div>
+                        <div class="item">Content item three</div>
+                        <div class="item">Content item four</div>
+                        <div class="item">Content item five</div>
+                        <div class="item">Content item six</div>
+                        <div class="item">Content item seven</div>
+                    </div>
+                </div>
+                <script lang="javascript">
+                    function showListSearch() {
+                        const mitems = document.querySelector(".search .items");
+                        mitems.style.display = mitems.style.display == "none" ? "block" : "none";
+                    }
+                </script>
+
+                <div class="select">
+                    <label> Dropdown</label>
+                    <div class="select-content">
+                        <select name="select">
+                            <option value="value1">Value 1</option>
+                            <option value="value2" selected>Value 2</option>
+                            <option value="value3">Value 3</option>
+                        </select>
+                    </div>
+                </div>
+
+
+            </article>
+
+            <article id="side-sheets" class="hidden">
+                <div class="title-article">
+                    <h4>side-sheets</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#side-sheets')">&lt;/&gt;</div></div>
+                </div>
+                side-sheets
+            </article>
+
+            <article id="sliders" class="hidden">
+                <div class="title-article">
+                    <h4>sliders</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#sliders')">&lt;/&gt;</div></div>
+                </div>
+                sliders
+            </article>
+
+            <article id="snackbar" class="hidden">
+                <div class="title-article">
+                    <h4>snackbar</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#snackbar')">&lt;/&gt;</div></div>
+                </div>
+                snackbar
+            </article>
+
+
+            <article id="switches">
+                <div class="title-article">
+                    <h4>switch</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#switches')">&lt;/&gt;</div></div>
+                </div>
+
+                <div class="switch">
+                    <div class="name">Toggle 1</div>
+                    <input type="checkbox" id="switch1" />
+                    <label for="switch1" class="ball"></label>
+                </div>
+
+                <div class="switch-duo">
+                    <div class="name">OFF</div>
+                    <div class="switch-ico">
+                        <input type="checkbox" id="switch2" />
+                        <label for="switch2" class="ball"></label>
+
+                        <label class="inner-icos">
+                            <span class="fas">OFF</span>
+                            <span class="fas">ON</span>
+                        </label>
+                    </div>
+                    <div class="name">On</div>
+                </div>
+
+
+                <div class="switch-theme">
+                    <div class="name">Light</div>
+                    <div class="switch-ico">
+                        <input type="checkbox" id="switch3" />
+                        <label for="switch3" class="ball"></label>
+                        <label class="inner-icos">
+                            <span class="fas fa-sun">🌞</span>
+                            <span class="fas fa-moon">🌙</span>
+                        </label>
+                    </div>
+                    <div class="name">Dark</div>
+                </div>
+
+            </article>
+
+            <article id="tabs" class="hidden">
+                <div class="title-article">
+                    <h4>tabs</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#tabs')">&lt;/&gt;</div></div>
+                </div>
+                tabs
+            </article>
+
+            <article id="text-fields">
+                <div class="title-article">
+                    <h4>text-fields</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#text-fields')">&lt;/&gt;</div></div>
+                </div>
+
+                <div class="input">
+                    <input type="text" placeholder=".">
+                    <label class="placeholder">Placeholder</label>
+                    <label class="helper"></label>
+                </div>
+                <div class="input-bg">
+                    <input type="text" placeholder=".">
+                    <label class="placeholder">Placeholder bg</label>
+                    <label class="helper">Helper text goes here</label>
+                </div>
+                <div class="input-bg">
+                    <input type="text" placeholder="." error>
+                    <label class="placeholder">Placeholder bg</label>
+                    <label class="helper">Helper text goes here</label>
+                </div>
+
+
+
+            </article>
+
+            <article id="time-pickers" class="hidden">
+                <div class="title-article">
+                    <h4>time-pickers</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#time-pickers')">&lt;/&gt;</div></div>
+                </div>
+                time-pickers
+            </article>
+
+            <article id="tooltips" class="hidden">
+                <div class="title-article">
+                    <h4>tooltips</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#tooltips')">&lt;/&gt;</div></div>
+                </div>
+                tooltips
+            </article>
+
+            <article id="top-app-bar" class="hidden">
+                <div class="title-article">
+                    <h4>top-app-bar</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#top-app-bar')">&lt;/&gt;</div></div>
+                </div>
+                top-app-bar
+            </article>
+
+
+            <article id="example-form1">
+                <div class="title-article">
+                    <h4>text-fields</h4>
+                    <div class="toggle__code"><div class="toggle__code-ico" onclick="showCode('#example-form1')">&lt;/&gt;</div></div>
+                </div>
+
+                <form>
+                    <h3>Sign Up</h3>
+                    <div class="input-bg">
+                        <input type="text" placeholder=".">
+                        <label class="placeholder">First name</label>
+                        <label class="helper"></label>
+                    </div>
+                    <div class="input-bg">
+                        <input type="text" placeholder=".">
+                        <label class="placeholder">Last name</label>
+                        <label class="helper"></label>
+                    </div>
+
+                    <div class="input-bg">
+                        <input type="text" placeholder=".">
+                        <label class="placeholder">Email Address</label>
+                        <label class="helper"></label>
+                    </div>
+
+                    <div class="input-bg">
+                        <input type="text" placeholder=".">
+                        <label class="placeholder">Type email egain</label>
+                        <label class="helper"></label>
+                    </div>
+
+                    <div class="input-bg">
+                        <input type="password" placeholder="." minlength="4" required>
+                        <label class="placeholder">Password</label>
+                        <label class="helper"></label>
+                    </div>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkboxEx1">
+                        <label for="checkboxEx1">Remember me</label>
+                    </div>
+
+                    <button class="btn">Sign Up</button>
+                </form>
+
+            </article>
+
+        </section>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
